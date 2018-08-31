@@ -1,11 +1,41 @@
-﻿
+﻿@using TechKNOW.Models.Repair;
+@model List<CreateViewModel>
 @{
     ViewData["Title"] = "Index";
+    ViewData["CreateEmployee"] = "/Repair/Create";
 }
 
-<h2>Repairs</h2>
+<div class="container-fluid">
+    <h1 class="row">REPAIR MANAGEMENT</h1>
 
+    <div class="row">
+        <table class="table" id="myTable">
+            <thead>
+                <tr class="bgcolor-darkteal">
+                    <th>Repair Number</th>
+                    <th>AssetTag</th>
+                    <th>SerialNumber</th>
+                    <th>Technician</th>
 
-<div>
+                    <th>
+                        <a href="@Url.Action("Create", "Repair")" class="glyphicon glyphicon-plus addTableButton"></a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>@item.ID</td>
+                        <td>@item.AssetTag</td>
+                        <td>@item.SerialNumber</td>
+                        <td>@item.TechnicianID</td>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
 </div>

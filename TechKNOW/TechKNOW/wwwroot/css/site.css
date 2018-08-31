@@ -35,3 +35,21 @@ body {
         display: none;
     }
 }
+
+
+.addTableButton {
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    padding-top: 0.3em;
+}
+
+    .addTableButton:hover {
+        color: #e68d1f;
+        text-decoration: none;
+        cursor: pointer !important;
+    }
+
+.bgcolor-darkteal {
+    background-color: #0084A9;
+}

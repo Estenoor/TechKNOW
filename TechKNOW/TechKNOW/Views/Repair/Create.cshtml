@@ -1,7 +1,35 @@
-﻿
+﻿@using TechKNOW.Models.Repair
+@model CreateViewModel
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "New Repair";
 }
 
-<h2>Create</h2>
+<div class="container-fluid">
+    <h1 class="row">NEW REPAIR</h1>
+    <hr />
+    <div class="row">
+        <form action="@Url.Action("Create", "Repair")" method="post">
+            <div class="form-group row">
+                @Html.LabelFor(r => r.AssetTag)
+                @Html.TextBoxFor(r => r.AssetTag)
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(r => r.SerialNumber)
+                @Html.TextBoxFor(r => r.SerialNumber)
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(r => r.TechnicianID)
+                @Html.TextBoxFor(r => r.TechnicianID)
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(r => r.StudentID)
+                @Html.TextBoxFor(r => r.StudentID)
+            </div>
+            <div class="form-group row">
+                <a href="@Url.Action("Index", "Repair")">Cancel</a>
+                <button type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
 
