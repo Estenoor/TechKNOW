@@ -10,19 +10,20 @@ namespace TechKNOW.Models.EntityModel
     {
         public int ID { get; set; }
 
-        public int TechnicianID { get; set; }
+        public String TechnicianID { get; set; }
+
         public int StudentID { get; set; }
 
         public ChromebookModel Chromebook { get; set; }
 
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
-        public string Description { get; set; }
-        public string Comments { get; set; }
+        public String Description { get; set; }
+        public String Comments { get; set; }
 
         public List<PartModel> PartList { get; set; }
 
-        public double RepairCost { get; set; }
+        public double? RepairCost { get; set; }
     }
 }

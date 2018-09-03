@@ -17,6 +17,7 @@ namespace TechKNOW.Models.Inventory
         public int? StudentID { get; set; }
 
         public bool Active { get; set; }
+        public string Location { get; set; }
 
         public List<RepairEntity> Repairs { get; set; }
     }

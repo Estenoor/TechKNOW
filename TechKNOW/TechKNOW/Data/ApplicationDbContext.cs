@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TechKNOW.Models.EntityModel;
+using TechKNOW.Models.Inventory;
 
 namespace TechKNOW.Data
 {
@@ -15,5 +16,6 @@ namespace TechKNOW.Data
         }
 
         public DbSet<RepairEntity> Repairs { get; set; }
+        public DbSet<ChromebookModel> Chromebooks { get; set; }
     }
 }

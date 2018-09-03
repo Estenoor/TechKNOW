@@ -27,9 +27,9 @@ namespace TechKNOW.Repositories
             _context.SaveChanges();
         }
 
-        public List<RepairEntity> GetRepairByID(int id)
+        public RepairEntity GetRepairByID(int id)
         {
-            return _context.Repairs.Where(r => r.ID == id).ToList();
+            return _context.Repairs.SingleOrDefault(r => r.ID == id);
         }
     }
 }

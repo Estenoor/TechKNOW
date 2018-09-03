@@ -1,5 +1,5 @@
-﻿@using TechKNOW.Models.Repair;
-@model List<CreateViewModel>
+﻿@using TechKNOW.Models.EntityModel;
+@model List<RepairEntity>
 @{
     ViewData["Title"] = "Index";
     ViewData["CreateEmployee"] = "/Repair/Create";
@@ -26,10 +26,9 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-
                         <td>@item.ID</td>
-                        <td>@item.AssetTag</td>
-                        <td>@item.SerialNumber</td>
+                        <td>@item.Chromebook.AssetTag</td>
+                        <td>@item.Chromebook.SerialNumber</td>
                         <td>@item.TechnicianID</td>
                         <td></td>
                     </tr>
