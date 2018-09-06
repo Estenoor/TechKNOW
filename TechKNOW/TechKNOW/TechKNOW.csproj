@@ -5,6 +5,7 @@
     <UserSecretsId>aspnet-TechKNOW-0735EF9E-FFA7-4EFC-BBEC-58AE421521EE</UserSecretsId>
     <ApplicationIcon />
     <Win32Resource />
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>

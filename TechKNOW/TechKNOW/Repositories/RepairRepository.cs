@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace TechKNOW.Repositories
 
         public List<RepairEntity> GetAllRepairs()
         {
-            return _context.Repairs.ToList();
+            return _context.Repairs.Include(r => r.Chromebook).ToList();
         }
 
         public void AddRepair(RepairEntity Repair)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TechKNOW.Data;
+using TechKNOW.Models.EntityModel;
 using TechKNOW.Models.Repair;
 using TechKNOW.Services;
 
@@ -20,7 +21,7 @@ namespace TechKNOW.Controllers
 
         public IActionResult Index()
         {
-            List<CreateViewModel> Model = _repairService.GetAllRepairs();
+            List<RepairEntity> Model = _repairService.GetAllRepairs();
             return View(Model);
         }
 
