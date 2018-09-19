@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "Color.css",
+	"sources": [
+		"Color.scss"
+	],
+	"mappings": "AAAA,AAAA,gBAAgB,AAAC,CACb,gBAAgB,CAAE,OAAQ,CAC7B",
+	"names": []
+}
